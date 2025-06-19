@@ -71,7 +71,6 @@ pdp_summary_list <- map2(pdp_list, names(pdp_list), function(df, var_name) {
 pdp_summary <- bind_rows(pdp_summary_list)
 
 # Create list of plots with error handling
-# Create list of plots with error handling
 pdp_plots <- lapply(top_vars$var, function(v) {
   tryCatch({
     pdp_subset <- filter(pdp_summary, variable == v)
